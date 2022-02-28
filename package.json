@@ -1,0 +1,22 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "Professional Readme Generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prolix19/node-readme-generator.git"
+  },
+  "author": "Daniel Birmingham",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prolix19/node-readme-generator/issues"
+  },
+  "homepage": "https://github.com/Prolix19/node-readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
