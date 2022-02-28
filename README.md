@@ -5,6 +5,8 @@
 ## Description
 This app will create a README.md file based upon user input. It is written in JavaScript and uses Node and its fs module, and Inquirer from NPM.
 
+Here is a link to a video demonstrating the functionality of this app: [https://watch.screencastify.com/v/xWKRMxyECQplmoMmI714](https://watch.screencastify.com/v/xWKRMxyECQplmoMmI714)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
