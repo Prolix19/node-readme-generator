@@ -87,7 +87,15 @@ const questions = [
         type: "checkbox",
         name: "license",
         message: "Select a license for your project:",
-        choices: ["GPL3", "ISC", "MIT"]
+        choices: ["GPL3", "ISC", "MIT"],
+        validate: licenseInput => {
+            if(licenseInput.length <= 1) {
+                return true;
+            } else {
+                console.log("Please choose at most one license for your project.");
+                return false;
+            }
+        }
     },
     {
         type: "input",
@@ -118,7 +126,15 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {};
+function writeToFile(fileName, data) {
+    fs.writeFile("./README.md", data, err => {
+        if(err) {
+            return err;
+        } else {
+            console.log("Your professional README has been generated! Please see the file README.md");
+        }
+    });
+};
 
 // TODO: Create a function to initialize app
 function init() {
@@ -131,11 +147,5 @@ init()
     return generateMarkdown(projectData);
 })
 .then(markdownData => {
-    fs.writeFile("./README.md", markdownData, err => {
-        if(err) {
-            return err;
-        } else {
-            console.log("Your professional README has been generated! Please see the file README.md");
-        }
-    });
+    writeToFile("README.md", markdownData);
 });
